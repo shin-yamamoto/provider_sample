@@ -12,7 +12,7 @@ class ProviderTodoModel extends ChangeNotifier {
   }
 
   Future<List<Map<String, dynamic>>> fetchTodo() async {
-    await Future<void>.delayed(const Duration(seconds: 1));
+    await Future<int>.delayed(const Duration(seconds: 3));
     return [
       <String, dynamic>{'taskName': '掃除', 'complete': false},
       <String, dynamic>{'taskName': '洗濯', 'complete': false},

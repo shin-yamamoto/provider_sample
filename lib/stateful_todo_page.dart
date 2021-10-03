@@ -14,14 +14,14 @@ class _StatefulTodoState extends State<StatefulTodoPage> {
 
   @override
   void initState() {
-    Future(() async {
-      todoList = await fetchTodo();
-    });
+    // Future(() async {
+    todoList = fetchTodo();
+    // });
     super.initState();
   }
 
-  Future<List<Map<String, dynamic>>> fetchTodo() async {
-    await Future<void>.delayed(const Duration(seconds: 1));
+  List<Map<String, dynamic>> fetchTodo() {
+    Future<void>.delayed(const Duration(seconds: 1));
     return [
       <String, dynamic>{'taskName': '掃除', 'complete': false},
       <String, dynamic>{'taskName': '洗濯', 'complete': false},
